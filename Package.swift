@@ -16,7 +16,7 @@ let package = Package(
     products: [
         .library(
             name: "KeyPathStringMacro",
-            targets: ["KeyPathString"]
+            targets: ["KeyPathStringMacro"]
         )
     ],
     dependencies: [
@@ -30,7 +30,7 @@ let package = Package(
                 .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
             ]
         ),
-        .target(name: "KeyPathString", dependencies: ["KeyPathStringMacros"]),
+        .target(name: "KeyPathStringMacro", dependencies: ["KeyPathStringMacros"]),
         .testTarget(
             name: "KeyPathStringTests",
             dependencies: [
